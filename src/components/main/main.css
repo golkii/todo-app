@@ -1,0 +1,89 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: scroll;
+}
+
+.container {
+  max-width: 500px;
+  flex: 1;
+}
+
+.todo-container {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 20px 1fr 30px;
+  grid-auto-rows: max-content;
+  gap: 10px;
+}
+
+.todo-name {
+  margin: 0;
+}
+
+.todo-status {
+  grid-area: 1 / 1 / 4 / 1;
+  width: 20px;
+  margin: 0;
+}
+
+.description {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.add-todo {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.add-todo:hover {
+  background-color: #ddd;
+}
+
+.more-button {
+  justify-self: right;
+  position: relative;
+}
+
+.more-button object {
+  width: 20px;
+  border-radius: 5px;
+}
+
+.more-button object:hover {
+  background-color: #ddd;
+}
+
+.todo-more-block {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  right: 0px;
+  bottom: 0;
+  box-shadow: #e0e0e0 0px 0px 4px 0px;
+}
+
+.more-button:hover .todo-more-block {
+  display: block;
+}
+
+.todo-more-block:hover {
+  display: block;
+}
+
+.todo-more-block p {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.todo-more-block p:hover {
+  background-color: #eee;
+}
